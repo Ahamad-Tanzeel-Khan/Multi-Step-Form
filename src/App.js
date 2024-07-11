@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import "./App.css"
+import MultiStepForm from './components/MultiStepForm/MultiStepForm';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <img className='background' src='/assets/background.jpg' alt='background' />
+            <div className='outer-container'>
+              <div className='main-container'>
+                <MultiStepForm />
+              </div>
+            </div>
+          </>
+        }/>
+        <Route path="/checkout" element={<><Checkout /></>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

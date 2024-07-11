@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Russo+One&display=swap");
+
+.checkout-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.text-container{
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+svg {
+	font-family: 'Russo One', sans-serif;
+	position: relative; 
+}
+svg text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 200px;
+}
+@keyframes stroke {
+    0%   {
+        fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+        stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
+    80%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+    100% {
+        fill: rgba(72,138,204,1); stroke: rgba(255, 255, 255, 0); 
+        stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+}
+
+.text-container span{
+    font-family: "Comforter Brush", cursive;
+    font-size: 50px;
+    color: rgb(26, 0, 99);
+}
+
+
+@media only screen and (max-width: 980px){
+    .text-container span{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .text-container{
+        height: 100%;
+        width: 100%;
+        gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .text-container span{
+        font-size: 40px;
+    }
+}

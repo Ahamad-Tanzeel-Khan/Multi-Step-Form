@@ -1,0 +1,22 @@
+.inp-main-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.name-inp-container{
+    display: flex;
+    gap: 50px;
+}
+.inp-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .name-inp-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
